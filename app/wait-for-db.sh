@@ -1,8 +1,7 @@
 #!/bin/sh
 
 set -e
-  
-shift
+
 cmd="$@"
 
 until psql "$DATABASE_URL" -c '\q'; do

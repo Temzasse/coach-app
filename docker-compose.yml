@@ -5,6 +5,7 @@ services:
     build:
       context: ./app
       dockerfile: Dockerfile
+    command: ["./wait-for-db.sh", "npm", "run", "start"]
     depends_on:
       - db
     restart: unless-stopped
